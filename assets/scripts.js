@@ -11,12 +11,9 @@ const renderProducts = () => {
         </div>
         `
     }
-
-
-
-
 }
 
 addEventListener("load", () => {
     renderProducts()
+    document.querySelector("#year").textContent = new Date().getFullYear()
 })
