@@ -22,29 +22,36 @@ li,
 }
 
 /* ENLACES */
-a{
+a {
     text-decoration: none;
 }
-a:hover{
+
+a:hover {
     text-decoration: underline;
 }
 
 /* BOTONES Y ENLACES */
 /* Primario */
-.btn-level-up{
+.btn-level-up {
     background-color: #1E90FF;
 }
 
 /* Secundario */
-.btn-level-up-secondary{
+.btn-level-up-secondary {
     background-color: #39FF14;
 }
 
+.btn-level-up-secondary:hover {
+    color: #D3D3D3 !important;
+    text-decoration: none;
+}
+
 /* HOME */
-.card-img-top{
+.card-img-top {
     max-height: 249px;
 }
+
 /* CARRUSEL */
-.carousel-inner > .carousel-item > img{
+.carousel-inner>.carousel-item>img {
     max-height: 249px;
 }
