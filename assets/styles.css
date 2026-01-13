@@ -48,3 +48,69 @@ a:hover{
 .carousel-inner > .carousel-item > img{
     max-height: 249px;
 }
+
+
+
+
+
+/* Formulario */
+/*color de fondo*/
+body{
+    background: linear-gradient(180deg, #39FF14 0%, #1E90FF 100%);
+  
+}
+
+.form-container{
+    background-color: rgba(6, 42, 245, 0.2);
+    backdrop-filter: blur(15px);
+    border-radius: 15px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    padding: 80px 35px;
+    width: 100%;
+    max-width: 420px;
+}
+
+.form-control{
+    background-color: transparent !important;
+    border: 2px solid #dcecf1;
+    color: #ffffff !important;
+    transition: border-color 0.3s ease;
+}
+
+.form-control:focus{
+    border-color: #39FF14;
+    box-shadow: none;
+    outline: none;
+}
+
+::placeholder {
+    color: #D3D3D3 !important;
+}
+
+.icon {
+    position: absolute;
+    top: 50%;
+    right: 15px;
+    transform: translateY(-50%);
+    color: #D3D3D3;
+    background: linear-gradient(135deg, #42a5f5, #56ccf2);
+    padding: 12px;
+    border-radius: 50%;
+}
+
+.form-container a {
+    text-decoration: none;
+}
+
+.btn-primary {
+    background-color: #1E90FF;
+    border: none;
+    transition: background-color 0.3s ease;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background-color: #39FF14;
+}
+
+
