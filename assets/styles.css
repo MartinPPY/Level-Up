@@ -1,5 +1,9 @@
 @import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap');
 
+body {
+    background: linear-gradient(180deg, #39FF14 0%, #1E90FF 100%);
+}
+
 /* Texto principal */
 h1,
 h2,
@@ -22,62 +26,56 @@ li,
 }
 
 /* ENLACES */
-a{
+a {
     text-decoration: none;
 }
-a:hover{
+
+a:hover {
     text-decoration: underline;
 }
 
 /* BOTONES Y ENLACES */
 /* Primario */
-.btn-level-up{
+.btn-level-up {
     background-color: #1E90FF;
 }
 
 /* Secundario */
-.btn-level-up-secondary{
+.btn-level-up-secondary {
     background-color: #39FF14;
 }
 
+.btn-level-up-secondary:hover {
+    color: #fff !important;
+}
+
 /* HOME */
-.card-img-top{
+.card-img-top {
     max-height: 249px;
 }
+
 /* CARRUSEL */
-.carousel-inner > .carousel-item > img{
+.carousel-inner>.carousel-item>img {
     max-height: 249px;
 }
 
-
-
-
-
-/* Formulario */
-/*color de fondo*/
-body{
-    background: linear-gradient(180deg, #39FF14 0%, #1E90FF 100%);
-  
-}
-
-.form-container{
+/* Formulario de registro */
+.form-container {
     background-color: rgba(6, 42, 245, 0.2);
     backdrop-filter: blur(15px);
     border-radius: 15px;
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
     padding: 80px 35px;
-    width: 100%;
-    max-width: 420px;
 }
 
-.form-control{
+.form-control {
     background-color: transparent !important;
     border: 2px solid #dcecf1;
     color: #ffffff !important;
     transition: border-color 0.3s ease;
 }
 
-.form-control:focus{
+.form-control:focus {
     border-color: #39FF14;
     box-shadow: none;
     outline: none;
@@ -102,15 +100,7 @@ body{
     text-decoration: none;
 }
 
-.btn-primary {
-    background-color: #1E90FF;
-    border: none;
-    transition: background-color 0.3s ease;
-    color: #ffffff;
+input[type="date"]::-webkit-calendar-picker-indicator {
+    filter: invert(1);
+    cursor: pointer;
 }
-
-.btn-primary:hover {
-    background-color: #39FF14;
-}
-
-

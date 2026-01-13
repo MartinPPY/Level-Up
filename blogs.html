@@ -17,7 +17,7 @@
 <body class="bg-dark text-white">
 
     <!-- HEADER -->
-    <header class="bg-dark border-bottom border-secondary sticky-top">
+    <header class="bg-dark border-bottom border-secondary sticky-top p-2">
         <nav class="navbar navbar-expand-lg navbar-dark container">
             <a class="navbar-brand fw-bold fs-4" href="#">🎮 Level Up</a>
 
@@ -48,8 +48,8 @@
                 </ul>
 
                 <div class="d-flex gap-3 align-items-center">
-                    <a href="#" class="btn btn-sm btn-outline-light">Iniciar sesión</a>
-                    <a href="#" class="btn btn-sm btn-level-up-secondary text-dark fw-bold">Registro</a>
+                    <a href="./login.html" class="btn btn-sm btn-outline-light">Iniciar sesión</a>
+                    <a href="./registro.html" class="btn btn-sm btn-level-up-secondary text-dark fw-bold">Registro</a>
                     <i class="bi bi-cart fs-5"></i>
                 </div>
             </div>
@@ -65,12 +65,9 @@
             <article class="row g-4">
 
                 <div class="card p-4 col-lg-12 bg-black">
-                    <div class="gap-4">
-                        <div class="d-flex flex-column gap-2 col-lg">
-                            <img src="./assets/images/blog1.webp" alt="blog-1" width="50%">
-                        </div>
-                        <div class="d-flex flex-column gap-2 col-lg">
-                            <h5>Ubisoft cierra su estudio en Halifax semanas después de sindicalizarse <a href="#" class="btn btn-sm btn-level-up-primary">Leer más <i class="bi bi-box-arrow-up-right"></i></a></h5>
+                    <div class="d-flex flex-wrap">
+                        <div class="d-flex flex-column gap-2 col-lg-6">
+                            <h5>Ubisoft cierra su estudio en Halifax semanas después de sindicalizarse </h5>
                             <p class="">
                                 Tras que los trabajadores del estudio de Ubisoft en Halifax votaran por sindicalizarse
                                 en
@@ -82,10 +79,35 @@
                                 jugadores
                                 sobre las condiciones laborales en el sector.
                             </p>
+                            <a href="https://www.gamedeveloper.com/" target="_blank"
+                                class="btn btn-sm btn-level-up-primary">Leer más <i
+                                    class="bi bi-box-arrow-up-right"></i></a>
+                        </div>
+                        <div class="d-flex flex-column gap-2 col-lg-6">
+                            <img src="./assets/images/blog1.webp" alt="blog-1" width="100%">
                         </div>
                     </div>
                 </div>
-                <div class="card p-4 col-lg-12 bg-black"></div>
+                <div class="card p-4 col-lg-12 bg-black">
+                    <div class="d-flex flex-wrap">
+                        <div class="d-flex flex-column gap-2 col-lg-6">
+                            <h5>Debate sobre el uso de IA en desarrollo de juegos: CEO de Arc Raiders responde </h5>
+                            <p class="">
+                                El CEO de los creadores de Arc Raiders ha defendido que su estudio no utiliza IA para
+                                reemplazar a empleados humanos, sino para acelerar tareas repetitivas en desarrollo. A
+                                pesar de esto, faltan detalles concretos sobre cómo se aplica la IA, y la discusión ha
+                                reavivado preocupaciones sobre el futuro del trabajo en la industria y el uso de
+                                tecnología para tareas tradicionalmente humanas.
+                            </p>
+                            <a href="https://www.pcgamer.com/games/third-person-shooter/we-dont-use-ai-to-replace-people-claims-arc-raiders-ceo-without-actually-explaining-what-they-do-use-it-for/"
+                                target="_blank" class="btn btn-sm btn-level-up-primary">Leer más <i
+                                    class="bi bi-box-arrow-up-right"></i></a>
+                        </div>
+                        <div class="d-flex flex-column gap-2 col-lg-6">
+                            <img src="./assets/images/blog2.webp" alt="blog-1" width="100%">
+                        </div>
+                    </div>
+                </div>
 
             </article>
 

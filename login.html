@@ -9,8 +9,9 @@
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css" rel="stylesheet">
-
-    <link rel="shortcut icon" href="./assets/images/icons/icon.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css"
+        integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
 
     <!-- CSS PROPIO -->
     <link rel="stylesheet" href="./assets/styles.css">
@@ -30,7 +31,7 @@
             <div class="collapse navbar-collapse" id="navbarMain">
                 <ul class="navbar-nav me-auto mb-2 mb-lg-0 gap-lg-3">
                     <li class="nav-item">
-                        <a class="nav-link active" href="#">Inicio</a>
+                        <a class="nav-link" href="./index.html">Inicio</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="./blogs.html">Noticias</a>
@@ -58,61 +59,31 @@
         </nav>
     </header>
 
-    <!-- MAIN -->
-    <main class="container-fluid">
 
-        <!-- HERO -->
-        <section class="container py-5">
-            <div class="row align-items-center g-5">
-                <div class="col-lg-6 text-center text-lg-start">
-                    <h1 class="display-5 fw-bold mb-3">Sube de nivel tu experiencia gamer</h1>
+    <main class="p-4 container-fluid text-white min-vh-100">
+        <div class="row d-flex justify-content-center align-items-center">
+            <div class="col-lg-6">
+                <form class="form-container text-center" autocomplete="off" action="./index.html">
+                    <h3 class="text-center mb-3">Inicio de Sesión</h3>
+                    <p class="text-center mb-3">Ingresa tus credenciales para acceder a tu cuenta</p>
 
-                    <p class="lead mb-4">
-                        Level Up es tu tienda virtual de videojuegos donde encontrarás
-                        los mejores títulos del momento, ofertas exclusivas y lanzamientos.
-                    </p>
-
-                    <div class="d-flex justify-content-center justify-content-lg-start gap-3">
-                        <a href="#products" class="btn btn-level-up btn-lg fw-bold text-white">
-                            Ver productos
-                        </a>
-                        <a href="#" class="btn btn-level-up-secondary btn-lg fw-bold text-dark">
-                            Contáctanos
-                        </a>
+                    <div class="mb-3 position-relative">
+                        <input type="email" class="form-control rounded-pill px-4 py-3 placeholder-dark"
+                            placeholder="Correo Electrónico (Máximo 100 caracteres)" maxlength="100">
+                        <i class="fa-solid fa-envelope icon"></i>
                     </div>
-                </div>
 
-                <div class="col-lg-6">
-                    <div id="carouselHero" class="carousel slide rounded overflow-hidden" data-bs-ride="carousel">
-                        <div class="carousel-inner">
-                            <div class="carousel-item active" data-bs-interval="3000">
-                                <img src="./assets/images/carrusel/1.png" class="d-block w-100" alt="Juego destacado">
-                            </div>
-                            <div class="carousel-item" data-bs-interval="3000">
-                                <img src="./assets/images/carrusel/2.png" class="d-block w-100" alt="Novedades">
-                            </div>
-                            <div class="carousel-item" data-bs-interval="3000">
-                                <img src="./assets/images/carrusel/3.png" class="d-block w-100" alt="Ofertas">
-                            </div>
-                        </div>
+                    <div class="mb-3 position-relative">
+                        <input type="password" class="form-control rounded-pill px-4 py-3 placeholder-dark"
+                            placeholder="Contraseña (Mínimo 8 caracteres)" minlength="8">
+                        <i class="fa-solid fa-lock icon"></i>
                     </div>
-                </div>
-            </div>
-        </section>
 
-        <!-- PRODUCTOS -->
-        <section class="container py-5" id="products">
-            <div class="text-center mb-5">
-                <h2 class="fw-bold">Productos destacados</h2>
-                <p>Una selección de nuestros videojuegos más populares</p>
-            </div>
+                    <button type="submit" class="btn btn-primary w-100 rounded-pill py-3">Iniciar Sesión</button>
 
-            <div class="row row-cols-1 row-cols-md-3 g-4">
-                <!-- CARD -->
-                
+                </form>
             </div>
-        </section>
-
+        </div>
     </main>
 
     <!-- FOOTER -->
