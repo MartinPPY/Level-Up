@@ -4,11 +4,23 @@ const renderProducts = () => {
 
     for (let i = 0; i <= 2; i++) {
         container.innerHTML += `
-        <div class="card p-4 col-lg bg-dark text-white border-white d-flex flex-column justify-content-between ">
-            <img src="${productos[i].image}" class="card-img-top" alt="...">
-            <h5 class="card-title" id="card-title"> ${productos[i].nombre}</h5>
-            <p class="card-text" id="card-text">  ${productos[i].precio} CLP </p>
-            <a href="#" class="btn btn-level-up">Agregar al carrito</a>
+        <div class="col">
+            <div class="card bg-black text-white h-100 border-secondary">
+                <img src="${productos[i].image}" class="card-img-top" alt="Juego">
+                <div class="card-body">
+                    <h5 class="card-title">${productos[i].nombre}</h5>
+                    <p class="card-text">
+                        ${productos[i].descripcion}
+                    </p>
+                </div>
+                <div class="card-footer d-flex justify-content-between align-items-center border-secondary">
+                    <span class="fw-bold text-info">$ ${new Intl.NumberFormat('es-CL').format(productos[i].precio)} CLP</span>
+                    <button class="btn btn-sm btn-level-up text-white">                        
+                        <i class="bi bi-cart-plus"></i>
+                        <span>Añadir al carrito</span>
+                    </button>
+                </div>
+            </div>
         </div>
         `
     }
