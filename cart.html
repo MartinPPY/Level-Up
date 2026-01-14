@@ -60,12 +60,12 @@
         <section class="row">
             <h1 class="">Mis compras</h1>
             <div class="col-lg-8" id="cart-items">
-                
+
             </div>
             <div class="col-lg-4 p-5 d-flex flex-column gap-5 border-start border-top">
                 <div class="d-flex justify-content-around">
                     <h3>Total:</h3>
-                    <h3 id="total" ></h3>
+                    <h3 id="total"></h3>
                 </div>
                 <div class="d-flex flex-column gap-3">
                     <fieldset class="d-flex flex-column">
@@ -74,8 +74,10 @@
                     </fieldset>
                     <button class="btn btn-sm btn-level-up-secondary"> Agregar cupon </button>
                 </div>
-                <div class="d-flex flex-column ">
+                <div class="d-flex flex-column gap-4 ">
                     <button class="btn btn-level-up"> Comprar </button>
+                    <button class="btn btn-sm btn-level-up-secondary" onclick="delAllFromCart()"> Vaciar carrito
+                    </button>
                 </div>
             </div>
         </section>
@@ -101,9 +103,11 @@
 
     <!-- JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./assets/js/products/data.js"></script>
     <script src="./assets/js/cart.js"></script>
     <script src="./assets/js/scripts.js"></script>
+
 
 </body>
 
