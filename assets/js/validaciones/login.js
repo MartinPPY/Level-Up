@@ -42,7 +42,8 @@ form.addEventListener("submit", e => {
         if (admin.password === pass.value && admin.email === email.value) {
             localStorage.setItem("authenticated", true)
             localStorage.setItem("isAdmin", true)
-            window.location.href = "index.html"
+            window.location.href = "admin.html"
+            return
         }
 
         Swal.fire({
@@ -61,7 +62,7 @@ form.addEventListener("submit", e => {
         if (admin.password === pass.value || admin.email === email.value) {
             localStorage.setItem("authenticated", true)
             localStorage.setItem("isAdmin", true)
-            window.location.href = "index.html"
+            window.location.href = "admin.html"
 
         }
 
