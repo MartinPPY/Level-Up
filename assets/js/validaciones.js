@@ -32,6 +32,18 @@ form.addEventListener("submit", e => {
         return;
     }
 
+    const user = JSON.parse(localStorage.getItem("user"));
+    if(user.password !== pass.value || user.email !== email.value){
+        Swal.fire({
+            icon:"warning",
+            title:"Error en el formulario",
+            text:"La contraseña o el correo no coinciden",
+            confirmButtonText:"Intentar de nuevo"
+        })
+        return;
+    }
+
+
     Swal.fire({
         icon: "success",
         title: "Registro exitoso 🎉",

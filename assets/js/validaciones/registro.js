@@ -1,3 +1,5 @@
+
+//LISTENER PARA TRAER COMUNAS
 addEventListener("DOMContentLoaded", () => {
     const selectComunas = document.querySelector("#comunas");
 
@@ -93,8 +95,6 @@ document.querySelector("form").addEventListener("submit", (e) => {
         `;
         return;
     }
-
-    console.log("paso!")
 
     // Guardar usuario (simple)
     const user = { run, name, lastname, email, password };

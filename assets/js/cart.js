@@ -61,6 +61,7 @@ function delAllFromCart() {
 function getProductsOfCart() {
     const cart = JSON.parse(localStorage.getItem('carrito')) || [];
     const container = document.querySelector("#cart-items");
+    const user = JSON.parse(localStorage.getItem("user"));
     container.innerHTML = "";
     for (let item of cart) {
         container.innerHTML += `
@@ -90,12 +91,17 @@ function getProductsOfCart() {
 
     if (window.location.pathname === '/cart.html') {
         document.querySelector("#total").textContent = cart.reduce((acc, item) => acc + item.precio * item.cantidad, 0).toLocaleString('es-CL') + ' CLP';
+
+        if (user.email.endsWith("@duoc.cl") || user.email.endsWith("@duocuc.cl")) {
+            document.querySelector("#is-duoc").textContent = "Por ser parte de duoc tienes un descuento del 10%";
+            document.querySelector("#total").textContent = cart.reduce((acc, item) => acc + item.precio * item.cantidad, 0).toLocaleString('es-CL') * 0.9 + ' CLP';
+        }
     }
 }
 
 function getCartLength() {
 
-    if(window.location.pathname === '/cart.html') return;
+    if (window.location.pathname === '/cart.html') return;
 
     const cart = JSON.parse(localStorage.getItem('carrito')) || [];
     if (cart.length > 0) {
