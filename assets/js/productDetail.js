@@ -16,11 +16,8 @@ addEventListener("load", () => {
     getDetails()
 })
 
-document.querySelector("form").addEventListener("submit", (e) => {    
+document.querySelector("form").addEventListener("submit", (e) => {
     e.preventDefault()
-
-    console.log("agreando al carrito")
-
     const carrito = localStorage.getItem("carrito") ? JSON.parse(localStorage.getItem("carrito")) : []
     const product = productos.find(p => p.codigo === document.querySelector("#product-code").textContent)
     const quantity = document.querySelector("#quantity").value
@@ -29,7 +26,7 @@ document.querySelector("form").addEventListener("submit", (e) => {
     if (!productInCart) {
 
         product.cantidad = quantity;
-        product.stock-= quantity;
+        product.stock -= quantity;
         carrito.push(product);
 
         localStorage.setItem('carrito', JSON.stringify(carrito));
@@ -51,7 +48,20 @@ document.querySelector("form").addEventListener("submit", (e) => {
 
 
     }
-    
-    
+
+    const cart = JSON.parse(localStorage.getItem('carrito')) || [];
+    if (cart.length > 0) {
+        const cantidadProductos = cart.reduce((acc, item) => acc + item.cantidad, 0);
+        document.querySelector("#cart-resumen").innerHTML = `
+        <i class="bi bi-cart fs-5"></i>
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">${cantidadProductos}</span>
+        `;
+    } else {
+        document.querySelector("#cart-resumen").innerHTML += `
+        <i class="bi bi-cart fs-5"></i>
+        `;
+    }
+
+
 })
 

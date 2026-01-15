@@ -6,21 +6,10 @@ Logica que se ejecutara aqui
 - Renderizar categorias
 
 */
-
-//FUNCION PARA RENDERIZAR CATEGORIAS
-const renderCategories = () => {
-    const categoriesMenu = document.querySelector("#categories-menu")
-    categorias.map(categoria => {
-        categoriesMenu.innerHTML += `
-            <li><a class="dropdown-item" href="#">${categoria.nombre}</a></li>
-        `
-    })
-}
-
 //CARRITO
-let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
 
 function traerResumen() {
+    const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
     if (carrito.length <= 0) {
         document.querySelector(".offcanvas-body").innerHTML = `
             <p>Aun no has agregado productos al carrito</p>
@@ -57,6 +46,5 @@ function traerResumen() {
 
 //LISTENER PARA CARGAR LAS FUNCIONES EN TODA LA PAGINA
 addEventListener("load", () => {
-    renderCategories()
     document.querySelector("#year").textContent = new Date().getFullYear()
 })

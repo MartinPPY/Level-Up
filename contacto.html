@@ -31,13 +31,10 @@
                     <li class="nav-item">
                         <a class="nav-link" href="./blogs.html">Noticias</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" data-bs-toggle="dropdown" href="#">
+                    <li class="nav-item ">
+                        <a class="nav-link " href="./products.html">
                             Productos
                         </a>
-                        <ul class="dropdown-menu dropdown-menu-dark" id="categories-menu">
-                            <li><a class="dropdown-item" href="./products.html">Todos los productos</a></li>
-                        </ul>
                     </li>
                     <li class="nav-item"><a class="nav-link" href="./nosotros.html">Nosotros</a></li>
                     <li class="nav-item"><a class="nav-link active" href="./contacto.html">Contacto</a></li>
@@ -46,7 +43,11 @@
                 <div class="d-flex gap-3 align-items-center">
                     <a href="./login.html" class="btn btn-sm btn-outline-light">Iniciar sesión</a>
                     <a href="./registro.html" class="btn btn-sm btn-level-up-secondary text-dark fw-bold">Registro</a>
-                    <a data-bs-toggle="offcanvas" href="#cart" role="button"><i class="bi bi-cart fs-5"></i></a>
+                    <a href="#cart" class="position-relative" role="button" data-bs-toggle="offcanvas" id="cart-resumen"
+                        aria-controls="cart" onclick="traerResumen()">
+
+                        <i class="bi bi-cart fs-5"></i>
+                    </a>
                 </div>
             </div>
         </nav>
@@ -95,11 +96,6 @@
     </main>
     <footer class="bg-dark border-top border-secondary">
         <div class="container py-4 text-center">
-            <ul class="nav justify-content-center mb-3">
-                <li class="nav-item"><a class="nav-link text-secondary" href="#">Acción</a></li>
-                <li class="nav-item"><a class="nav-link text-secondary" href="#">Aventura</a></li>
-                <li class="nav-item"><a class="nav-link text-secondary" href="#">RPG</a></li>
-            </ul>
 
             <p class="mb-0">
                 © <span id="year"></span> Level Up — Todos los derechos reservados
@@ -124,6 +120,8 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/validaciones/contacto.js"></script>
+    <script src="./assets/js/cart.js"></script>
+    <script src="./assets/js/scripts.js"></script>
 </body>
 
 </html>

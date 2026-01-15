@@ -1,4 +1,5 @@
 function addToCart(codigo) {
+    const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
     const producto = productos.find(producto => producto.codigo === codigo);
     const cartItem = carrito.find(item => item.codigo === codigo);
 
@@ -23,6 +24,7 @@ function addToCart(codigo) {
 }
 
 function delToCart(codigo) {
+    const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
     const cartItem = carrito.find(item => item.codigo === codigo);
     if (cartItem) {
         cartItem.cantidad--;
@@ -92,13 +94,15 @@ function getProductsOfCart() {
 }
 
 function getCartLength() {
-    console.log('cart length')
+
+    if(window.location.pathname === '/cart.html') return;
+
     const cart = JSON.parse(localStorage.getItem('carrito')) || [];
     if (cart.length > 0) {
-        const cartLength = cart.reduce((acc, item) => acc + item.cantidad, 0);
+        const cantidadProductos = cart.reduce((acc, item) => acc + item.cantidad, 0);
         document.querySelector("#cart-resumen").innerHTML = `
         <i class="bi bi-cart fs-5"></i>
-        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">${cartLength}</span>
+        <span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">${cantidadProductos}</span>
         `;
     } else {
         document.querySelector("#cart-resumen").innerHTML += `
@@ -110,4 +114,5 @@ function getCartLength() {
 
 addEventListener('DOMContentLoaded', () => {
     getProductsOfCart();
+    getCartLength();
 });
