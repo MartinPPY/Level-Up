@@ -1,8 +1,14 @@
 //SCRIPT PARA COLOCAR PRODUCTOS EN EL LA SECCION PRODUCTOS
 const renderProducts = () => {
-    const container = document.querySelector("#products > .row")
+    let container
 
-    for (let i = 0; i <= 2; i++) {
+    if(window.location.pathname === '/index.html'){
+        container = document.querySelector("#products > .scroll>.row")
+    }else{
+        container = document.querySelector("#products > .row")
+    }
+
+    for (let i = 0; i < productos.length; i++) {
         container.innerHTML += `
         <div class="col">
             <div class="card bg-black text-white h-100 border-secondary">

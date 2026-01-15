@@ -122,3 +122,17 @@ addEventListener('DOMContentLoaded', () => {
     getProductsOfCart();
     getCartLength();
 });
+
+function comprar() {
+    Swal.fire({
+        icon: 'success',
+        title: 'Gracias por tu compra',
+        text: 'Tu compra ha sido realizada con exito',
+        showConfirmButton: false,
+        timer: 2000
+    })
+
+    localStorage.removeItem('carrito');
+    getProductsOfCart()
+    window.location.href = '/index.html'
+}

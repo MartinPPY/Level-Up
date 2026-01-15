@@ -32,7 +32,7 @@ const productos = [
         nombre: "Auriculares Gamer HyperX Cloud II",
         precio: 79990,
         descripcion: "Proporcionan un sonido envolvente de calidad con un micrófono desmontable y almohadillas de espuma viscoelástica para mayor comodidad durante largas sesiones de juego.",
-        image: "./assets/images/products/Auriculares-Gamer-HyperX-Cloud-II",
+        image: "./assets/images/products/Auriculares-Gamer-HyperX-Cloud-II.jpg",
         stock: 10
     },
     {
@@ -41,7 +41,7 @@ const productos = [
         nombre: "PlayStation 5",
         precio: 549990,
         descripcion: "La consola de última generación de Sony, que ofrece gráficos impresionantes y tiempos de carga ultrarrápidos para una experiencia de juego inmersiva.",
-        image: "./assets/images/products/PlayStation-5",
+        image: "./assets/images/products/PlayStation-5.jpg",
         stock: 10
     },
     {
@@ -50,7 +50,7 @@ const productos = [
         nombre: "PC Gamer ASUS ROG Strix",
         precio: 1299990,
         descripcion: "Un potente equipo diseñado para los gamers más exigentes, equipado con los últimos componentes para ofrecer un rendimiento excepcional en cualquier juego.",
-        image: "./assets/images/products/PC-Gamer-ASUS-ROG-Strix",
+        image: "./assets/images/products/PC-Gamer-ASUS-ROG-Strix.jpg",
         stock: 10
     },
     {
@@ -59,7 +59,7 @@ const productos = [
         nombre: "Silla Gamer Secretlab Titan",
         precio: 349990,
         descripcion: "Diseñada para el máximo confort, esta silla ofrece un soporte ergonómico y personalización ajustable para sesiones de juego prolongadas.",
-        image: "./assets/images/products/Silla-Gamer-Secretlab-Titan",
+        image: "./assets/images/products/Silla-Gamer-Secretlab-Titan.jpg",
         stock: 10
     },
     {
@@ -68,7 +68,7 @@ const productos = [
         nombre: "Mouse Gamer Logitech G502 HERO",
         precio: 49990,
         descripcion: "Con sensor de alta precisión y botones personalizables, este mouse es ideal para gamers que buscan un control preciso y personalización.",
-        image: "./assets/images/products/Mouse-Gamer-Logitech-G502-HERO",
+        image: "./assets/images/products/Mouse-Gamer-Logitech-G502-HERO.jpg",
         stock: 10
     },
     {
@@ -77,7 +77,7 @@ const productos = [
         nombre: "Mousepad Razer Goliathus Extended Chroma",
         precio: 29990,
         descripcion: "Ofrece un área de juego amplia con iluminación RGB personalizable, asegurando una superficie suave y uniforme para el movimiento del mouse.",
-        image: "./assets/images/products/Mousepad-Razer-Goliathus-Extended-Chroma",
+        image: "./assets/images/products/Mousepad-Razer-Goliathus-Extended-Chroma.jpg",
         stock: 10
     },
     {
@@ -86,7 +86,7 @@ const productos = [
         nombre: "Polera Gamer Personalizada Level-Up",
         precio: 14990,
         descripcion: "Una camiseta cómoda y estilizada, con la posibilidad de personalizarla con tu gamer tag o diseño favorito.",
-        image: "./assets/images/products/Polera-Gamer-Personalizada-Level-Up",
+        image: "./assets/images/products/Polera-Gamer-Personalizada-Level-Up.jpg",
         stock: 10
     }
 ];

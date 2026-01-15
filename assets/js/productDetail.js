@@ -20,7 +20,7 @@ document.querySelector("form").addEventListener("submit", (e) => {
     e.preventDefault()
     const carrito = localStorage.getItem("carrito") ? JSON.parse(localStorage.getItem("carrito")) : []
     const product = productos.find(p => p.codigo === document.querySelector("#product-code").textContent)
-    const quantity = document.querySelector("#quantity").value
+    const quantity = parseInt(document.querySelector("#quantity").value)
     const productInCart = carrito.find(p => p.codigo === product.codigo)
 
     if (!productInCart) {
@@ -37,8 +37,8 @@ document.querySelector("form").addEventListener("submit", (e) => {
 
     } else {
 
-        productInCart.cantidad += parseInt(quantity)
-        product.stock -= parseInt(quantity)
+        productInCart.cantidad += quantity
+        product.stock -= quantity
 
         localStorage.setItem('carrito', JSON.stringify(carrito));
 
