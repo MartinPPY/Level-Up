@@ -60,7 +60,7 @@ function isAuthenticated() {
 }
 
 function logOut(){
-    localStorage.clear()
+    localStorage.removeItem("authenticated")
     window.location.href = "login.html"
 }
 
