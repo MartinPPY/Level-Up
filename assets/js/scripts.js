@@ -6,8 +6,8 @@ Logica que se ejecutara aqui
 - Renderizar categorias
 
 */
-//CARRITO
 
+//CARRITO
 function traerResumen() {
     const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
     if (carrito.length <= 0) {
@@ -44,7 +44,41 @@ function traerResumen() {
     }
 }
 
+function isAuthenticated() {
+    const authenticated = localStorage.getItem("authenticated")
+    if (!authenticated) {
+        document.querySelector("#cart-resumen").innerHTML = ""
+    }else{
+        document.querySelector("#auth-options").innerHTML = `
+            <button class="btn btn-sm btn-outline-light" onclick="logOut()" >Cerrar sesión</button>
+            <a href="#cart" class="position-relative" role="button" data-bs-toggle="offcanvas" id="cart-resumen"
+                aria-controls="cart" onclick="traerResumen()">
+                <i class="bi bi-cart fs-5"></i>
+            </a>
+        `
+    }
+}
+
+function logOut(){
+    localStorage.clear()
+    window.location.href = "login.html"
+}
+
 //LISTENER PARA CARGAR LAS FUNCIONES EN TODA LA PAGINA
 addEventListener("load", () => {
     document.querySelector("#year").textContent = new Date().getFullYear()
+    isAuthenticated()
 })
+
+//SCRIPT PARA HARCODEAR EL USUARIO ADMIN
+let admin = localStorage.getItem("admin")
+if (!admin) {
+    admin = {
+        email: "admin@gmail.com",
+        password: "12345678"
+    }
+
+    localStorage.setItem("admin", JSON.stringify(admin))    
+}
+
+//SCRIPT PARA VERIFICAR USUARIO ADMINISTRADOR

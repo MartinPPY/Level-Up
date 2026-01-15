@@ -93,8 +93,8 @@ function getProductsOfCart() {
         document.querySelector("#total").textContent = cart.reduce((acc, item) => acc + item.precio * item.cantidad, 0).toLocaleString('es-CL') + ' CLP';
 
         if (user.email.endsWith("@duoc.cl") || user.email.endsWith("@duocuc.cl")) {
-            document.querySelector("#is-duoc").textContent = "Por ser parte de duoc tienes un descuento del 10%";
-            document.querySelector("#total").textContent = cart.reduce((acc, item) => acc + item.precio * item.cantidad, 0).toLocaleString('es-CL') * 0.9 + ' CLP';
+            document.querySelector("#is-duoc").textContent = "Por ser parte de duoc tienes un descuento del 20%";
+            document.querySelector("#total").textContent = cart.reduce((acc, item) => acc + item.precio * item.cantidad, 0).toLocaleString('es-CL') * 0.8 + ' CLP';
         }
     }
 }

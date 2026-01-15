@@ -33,23 +33,48 @@ form.addEventListener("submit", e => {
     }
 
     const user = JSON.parse(localStorage.getItem("user"));
-    if(user.password !== pass.value || user.email !== email.value){
+
+
+    if (!user) {
+
+        const admin = JSON.parse(localStorage.getItem("admin"))
+
+        if (admin.password === pass.value && admin.email === email.value) {
+            localStorage.setItem("authenticated", true)
+            localStorage.setItem("isAdmin", true)
+            window.location.href = "index.html"
+        }
+
         Swal.fire({
-            icon:"warning",
-            title:"Error en el formulario",
-            text:"La contraseña o el correo no coinciden",
-            confirmButtonText:"Intentar de nuevo"
+            icon: "warning",
+            title: "Ha ocurrido un error",
+            text: "El usuario no existe",
+            confirmButtonText: "Ok"
+        })
+        return
+    }
+
+    if (user.password !== pass.value || user.email !== email.value) {
+
+        const admin = JSON.parse(localStorage.getItem("admin"))
+
+        if (admin.password === pass.value || admin.email === email.value) {
+            localStorage.setItem("authenticated", true)
+            localStorage.setItem("isAdmin", true)
+            window.location.href = "index.html"
+
+        }
+
+        Swal.fire({
+            icon: "warning",
+            title: "Ha ocurrido un error",
+            text: "La contraseña o el correo no coinciden",
+            confirmButtonText: "Intentar de nuevo"
         })
         return;
     }
 
+    localStorage.setItem("authenticated", true)
+    window.location.href = "index.html"
 
-    Swal.fire({
-        icon: "success",
-        title: "Registro exitoso 🎉",
-        text: "Bienvenido a Level Up",
-        confirmButtonText: "Continuar"
-    }).then(() => {
-        window.location.href = "index.html";
-    });
 });
