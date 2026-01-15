@@ -2,7 +2,7 @@
 const renderProducts = () => {
     let container
 
-    if(window.location.pathname === '/index.html'){
+    if(window.location.pathname.endsWith("index.html")){
         container = document.querySelector("#products > .scroll>.row")
     }else{
         container = document.querySelector("#products > .row")
