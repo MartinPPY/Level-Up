@@ -31,7 +31,7 @@ function addToCart(codigo) {
 }
 
 function delToCart(codigo) {
-    const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
+    let carrito = JSON.parse(localStorage.getItem('carrito')) || [];
     const cartItem = carrito.find(item => item.codigo === codigo);
     if (cartItem) {
         cartItem.cantidad--;

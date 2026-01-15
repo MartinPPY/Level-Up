@@ -49,6 +49,14 @@ function isAuthenticated() {
     if (!authenticated) {
         document.querySelector("#cart-resumen").innerHTML = ""
     } else {
+
+        if(window.location.href.endsWith("cart.html")){
+            document.querySelector("#auth-options").innerHTML = `
+            <button class="btn btn-sm btn-outline-light" onclick="logOut()" >Cerrar sesión</button>
+        `
+            return
+        }
+
         const cart = JSON.parse(localStorage.getItem('carrito')) || [];
         document.querySelector("#auth-options").innerHTML = `
             <button class="btn btn-sm btn-outline-light" onclick="logOut()" >Cerrar sesión</button>

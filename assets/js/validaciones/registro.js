@@ -96,9 +96,23 @@ document.querySelector("form").addEventListener("submit", (e) => {
         return;
     }
 
-    // Guardar usuario (simple)
     const user = { run, name, lastname, email, password };
     localStorage.setItem("user", JSON.stringify(user));
+
+    if (window.location.href.endsWith("admin.html")) {
+
+        Swal.fire({
+            icon: "success",
+            title: "Usuario registrado",
+            confirmButtonText: "OK"
+        })
+
+        
+
+        return
+    }
+
+
 
     Swal.fire({
         icon: "success",
