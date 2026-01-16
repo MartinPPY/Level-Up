@@ -1,77 +1,16 @@
-**CASO LEVEL UP**
+# React + Vite
 
-Se trata sobre una tienda de videojuegos que se encarga de vender consolas, accesorios y juegos de mesa.
+This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 
-Requerimientos funcionales:
+Currently, two official plugins are available:
 
-- Solo mayores de edad pueden registrarse y realizar compras (18 años).
-- Ofrecer descuento a clientes con el correo de duoc (descuento del 20%).
-- Permitir a usuarios cambiar sus datos personales y gestionar preferencias de compra.
-- Mostrar productos, ordenados por catalogo.
-- Implementar filtros de busqueda.
-- Debe tener un carrito de compras.
-- Debe permitir dejar a los clientes reseñas de los productos.
-- Debe permitir a los usuarios aplicar un sistema de niveles .basados en puntos para poder despues canjear productos o obtener descuentos.
+- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
+- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
 
-# Reglas de diseño
+## React Compiler
 
-Color de fondo:
-- Color de fondo principal: #000
+The React Compiler is currently not compatible with SWC. See [this issue](https://github.com/vitejs/vite-plugin-react/issues/428) for tracking the progress.
 
+## Expanding the ESLint configuration
 
-Tipografia:
-- Roboto, una fuente sans-serif moderna y legible para todo el texto general.
-- https://fonts.google.com/specimen/Roboto
-
-Fuente de Encabezado:
--  Orbitron, una fuente futurista que resalta los títulos y encabezados.
--  https://fonts.google.com/specimen/Orbitron
-
-Colores de Texto
-
--  Texto Principal: Blanco ( #FFFFFF ) para asegurar un buen contraste sobre el fondo oscuro.
--  Texto Secundario: Gris Claro ( #D3D3D3 ) para descripciones y texto secundario.
-
-Botones primarios:
--  Azul Eléctrico ( #1E90FF )
-
-Botones secundarios:
--  Verde Neón ( #39FF14 )
-
-
-## Categorias
-
--  Juegos de Mesa
--  Accesorios
--  Consolas
--  Computadores Gamers
--  Sillas Gamers
--  Mouse
--  Mousepad
--  Poleras Personalizadas
--  Polerones Gamers Personalizado
-
-## Validaciones a la hora de registrar el usuario
-
-- 100 caracteres maximo para el nombre, apellido y correo.
-- El correo electronico debe solo ser: @gmail.com, @duoc.cl y @duocuc.cl
-- Mayor de 18 años.
-- la contraseña debe tener minimo 4 caracteres y maximo de 10 caracteres.
-- Comuba y Region validos.
-- Tipo usuario: solo vista de admnistrador
-
-
-## Indicaciones a la hora de crear un producto
-
-- Codigo: debe ser texto, requerido, minimo 3 caracteres.
-- Nombre: Requerido y maximo 100 caracteres.
-- Descripcion: Requerido y maximo 500 caracteres.
-- Precio: Requerido y en caso de ser 0 se considera free.
-- stock: requerido y debe ser un numero.
-- isLowStock: requerido y debe ser un booleano. Indicar si el stock es bajo.
-- categoria: requerido y debe ser una categoria valida.
-- imagen: opcional.
-
-
-
-
+If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
