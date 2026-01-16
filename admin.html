@@ -142,13 +142,13 @@
 
                             <div class="mb-3">
                                 <input type="password" class="form-control"
-                                    placeholder="Contraseña (Mínimo 8 caracteres)" id="password" minlength="8"
+                                    placeholder="Contraseña (Mínimo 4 caracteres)" id="password" minlength="4"
                                     maxlength="10" required>
                             </div>
 
                             <div class="mb-3">
                                 <input type="password" class="form-control" placeholder="Repetir contraseña"
-                                    id="confirm-password" minlength="8" maxlength="10" required>
+                                    id="confirm-password" minlength="4" maxlength="10" required>
                             </div>
 
                             <div class="error">
@@ -234,7 +234,7 @@
                             </div>
                             <div class="mb-3">
                                 <input type="number" class="form-control" placeholder="Precio del producto" min="0"
-                                    id="product-price" required>
+                                    id="product-price" step="any" required>
                             </div>
                             <div class="mb-3">
                                 <input type="number" class="form-control" placeholder="Stock" min="0" id="product-stock"
@@ -339,6 +339,7 @@
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="./assets/js/products/data.js"></script>
     <script src="./assets/js/validaciones/registro.js"></script>
+    <script src="./assets/js/validaciones/product.js"></script> 
 </body>
 
 </html>
