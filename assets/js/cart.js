@@ -1,16 +1,22 @@
 function addToCart(codigo) {
 
-    const authenticated = localStorage.getItem("authenticated");
-    if(!authenticated){
-        window.location.href = '/login.html';
-        return;
-    }
-
     const carrito = JSON.parse(localStorage.getItem('carrito')) || [];
     const producto = productos.find(producto => producto.codigo === codigo);
     const cartItem = carrito.find(item => item.codigo === codigo);
 
     if (!cartItem) {
+
+        if (producto.stock <= 0) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: 'No hay stock disponible',
+                timer: 2000,
+                showConfirmButton: false
+            })
+            return
+        }
+
         producto.cantidad = 1;
         producto.stock--;
         carrito.push(producto);
@@ -20,6 +26,19 @@ function addToCart(codigo) {
         }
         getCartLength();
     } else {
+
+        if (producto.stock <= 0) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Error',
+                text: 'No hay stock disponible',
+                timer: 2000,
+                showConfirmButton: false
+            })
+            return
+
+        }
+
         cartItem.cantidad ? cartItem.cantidad++ : cartItem.cantidad = 1;
         producto.stock--;
         localStorage.setItem('carrito', JSON.stringify(carrito));
@@ -139,8 +158,8 @@ function comprar() {
         timer: 2000
     }).then(() => {
 
-    localStorage.removeItem('carrito');
-    getProductsOfCart()
-    window.location.href = '/index.html'
-    })  
+        localStorage.removeItem('carrito');
+        getProductsOfCart()
+        window.location.href = '/index.html'
+    })
 }

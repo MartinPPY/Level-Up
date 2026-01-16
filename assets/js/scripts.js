@@ -44,41 +44,10 @@ function traerResumen() {
     }
 }
 
-function isAuthenticated() {
-    const authenticated = localStorage.getItem("authenticated")
-    if (!authenticated) {
-        document.querySelector("#cart-resumen").innerHTML = ""
-    } else {
-
-        if(window.location.href.endsWith("cart.html")){
-            document.querySelector("#auth-options").innerHTML = `
-            <button class="btn btn-sm btn-outline-light" onclick="logOut()" >Cerrar sesión</button>
-        `
-            return
-        }
-
-        const cart = JSON.parse(localStorage.getItem('carrito')) || [];
-        document.querySelector("#auth-options").innerHTML = `
-            <button class="btn btn-sm btn-outline-light" onclick="logOut()" >Cerrar sesión</button>
-            <a href="#cart" class="position-relative" role="button" data-bs-toggle="offcanvas" id="cart-resumen"
-                aria-controls="cart" onclick="traerResumen()">
-                <i class="bi bi-cart fs-5"></i>
-                ${cart.length > 0 ? `<span class="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">${cart.reduce((acc, item) => acc + item.cantidad, 0)}</span>` : ""}
-            </a>
-        `
-    }
-}
-
-function logOut() {
-    localStorage.removeItem("authenticated")
-    localStorage.removeItem("isAdmin")
-    window.location.href = "login.html"
-}
 
 //LISTENER PARA CARGAR LAS FUNCIONES EN TODA LA PAGINA
 addEventListener("load", () => {
     document.querySelector("#year").textContent = new Date().getFullYear()
-    isAuthenticated()
 })
 
 //SCRIPT PARA HARCODEAR EL USUARIO ADMIN
