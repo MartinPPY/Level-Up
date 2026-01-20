@@ -41,7 +41,7 @@ export const getFields = () => {
             value: 0,
             step: 1
         }, {
-            id: "stock-critico",
+            id: "stock-critico (Opcional)",
             label: "Stock Crítico",
             type: "number",
             placeholder: "Stock crítico del producto",
@@ -62,7 +62,7 @@ export const getFields = () => {
         },
         {
             id: "imagen",
-            label: "Imagen",
+            label: "Imagen (Opcional)",
             type: "file",
             accept: "image/*",
             required: false
