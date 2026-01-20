@@ -36,7 +36,7 @@ export const Header = () => {
                     </ul>
 
                     <div className="d-flex gap-3 align-items-center" id="auth-options">
-                        <Link to="/login" className="tienda btn btn-sm btn-outline-info">Iniciar sesión</Link>
+                        <Link to="/tienda/login" className="tienda btn btn-sm btn-outline-info">Iniciar sesión</Link>
                         <Link to="/tienda/registro" className="tienda btn btn-sm btn-outline-success">Registrarse</Link>
                         <button className="position-relative text-white btn" role="button" data-bs-toggle="offcanvas" id="cart-resumen"
 

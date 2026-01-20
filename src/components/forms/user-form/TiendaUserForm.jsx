@@ -17,8 +17,6 @@ export const TiendaUserForm = () => {
 
     const onSubmit = (e) => {
         e.preventDefault()
-
-        console.log(formData)
         const validationErrors = validateForm(formData)
 
         if (Object.keys(validationErrors).length > 0) {
@@ -63,7 +61,7 @@ export const TiendaUserForm = () => {
 
                     {field.type === "select" ? (
                         <select
-                            className="form-select bg-dark text-white"
+                            className="form-select bg-dark text-white border-info tienda-registro-placeholder"
                             id={field.id}
                             required={field.required}
                             disabled={field.disabled}
@@ -78,7 +76,7 @@ export const TiendaUserForm = () => {
                     ) : (
                         <input
                             type={field.type}
-                            className="form-control bg-dark text-white"
+                            className="form-control bg-dark text-white border-info tienda-registro-placeholder"
                             id={field.id}
                             placeholder={field.placeholder}
                             minLength={field.minLength}

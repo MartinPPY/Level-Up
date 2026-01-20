@@ -42,7 +42,7 @@ export const getFields = ({
             id: "birthday",
             label: "Fecha de nacimiento",
             type: "date",
-            required: window.location.pathname.endsWith("/register")
+            required: window.location.pathname.endsWith("registro") ? true : false
         },
         {
             id: "userType",

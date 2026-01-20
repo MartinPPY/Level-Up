@@ -78,5 +78,9 @@ export const validateForm = (formData) => {
         errors.password = 'La contraseña debe tener al menos 6 caracteres'
     }
 
+    if (!formData.confirmPassword || formData.confirmPassword !== formData.password) {
+        errors.confirmPassword = 'Las contraseñas no coinciden'
+    }
+
     return errors ? errors : null
 }

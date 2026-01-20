@@ -7,3 +7,8 @@
     height: 300px;
     object-fit: cover;
 }
+
+.tienda-registro-placeholder::placeholder{
+    color: #fff;
+    opacity: 1;
+}
