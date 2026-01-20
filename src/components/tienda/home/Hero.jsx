@@ -19,7 +19,7 @@ export const Hero = () => {
                         <Link to="/productos" className="btn btn-lg btn-outline-info   fw-bold">
                             Ver productos
                         </Link>
-                        <Link to="/contacto" className="btn btn-lg btn-success fw-bold">
+                        <Link to="/tienda/contacto" className="btn btn-lg btn-success fw-bold">
                             Contáctanos
                         </Link>
                     </div>

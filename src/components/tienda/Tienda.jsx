@@ -4,6 +4,7 @@ import { Navigate, Route, Routes } from "react-router-dom"
 import { Home } from "./home/Home"
 import { Registro } from "./registro/Registro"
 import { Login } from "./login/Login"
+import { Contacto } from "./contacto/Contacto"
 
 export const Tienda = () => {
     return (
@@ -14,6 +15,7 @@ export const Tienda = () => {
                 <Route path="/home" element={<Home />} />
                 <Route path="/registro" element={<Registro />} />
                 <Route path="/login" element={<Login />} />
+                <Route path="/contacto" element={<Contacto />} />
             </Routes>
             <Footer />
         </>
