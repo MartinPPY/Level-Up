@@ -1,5 +1,5 @@
 import { useRef, useState } from "react"
-import { comunas,regiones } from "../../../data"
+import { comunas,regiones } from "../../../data/data"
 import { validateForm } from "./validaciones"
 import Swal from "sweetalert2"
 import { getFields } from "./fields"

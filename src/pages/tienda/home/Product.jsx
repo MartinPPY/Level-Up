@@ -1,17 +1,19 @@
 import { Eye, ShoppingCart } from "lucide-react"
-import { productos } from "../../../data"
+import { productos } from "../../../data/data"
 import { useCart } from "../../../context/CartContext"
 import { Link } from "react-router-dom"
 
 
 export const Product = () => {
 
-    const { setCart } = useCart()
+    const { setCart,cart } = useCart()
 
     const addToCart = (codigo) => {
 
         const producto = productos.find((p) => p.codigo === codigo)
-        setCart((prevCart) => [...prevCart, producto])
+        const cartItem = cart.find((item) => item.codigo === codigo)
+        
+        setCart((prevCart) => [...prevCart, cartItem ? { ...cartItem, cantidad: cartItem.cantidad + 1 } : { ...producto, cantidad: 1 }] )
 
     }
 

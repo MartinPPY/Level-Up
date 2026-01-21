@@ -46,7 +46,7 @@ export const Header = () => {
                             aria-controls="cart">
                             <ShoppingCart />
                             <span className="position-absolute top-0 start-100 translate-middle badge rounded-pill bg-danger">
-                                {cart.reduce((total, item) => total + item.quantity, 0)}
+                                {cart.reduce((total, item) => total + item.cantidad, 0)}
                             </span>
                         </Link>
                     </div>

@@ -1,13 +1,13 @@
-import catan from "./assets/images/products/catan.webp";
-import carcassonne from "./assets/images/products/carcassonne.jpg";
-import controlXboxSeriesX from "./assets/images/products/control-xbox-series-x.jpg";
-import auricularesGamerHyperX from "./assets/images/products/Auriculares-Gamer-HyperX-Cloud-II.jpg";
-import playstation5 from "./assets/images/products/PlayStation-5.jpg";
-import pcGamerASUSROGStrix from "./assets/images/products/PC-Gamer-ASUS-ROG-Strix.jpg";
-import sillaGamerSecretlabTitan from "./assets/images/products/Silla-Gamer-Secretlab-Titan.jpg";
-import mouseGamerLogitechG502HERO from "./assets/images/products/Mouse-Gamer-Logitech-G502-HERO.jpg";
-import mousepadRazerGoliathusExtendedChroma from "./assets/images/products/Mousepad-Razer-Goliathus-Extended-Chroma.jpg";
-import poleraGamerPersonalizadaLevelUp from "./assets/images/products/Polera-Gamer-Personalizada-Level-Up.jpg";
+import catan from "../assets/images/products/catan.webp";
+import carcassonne from "../assets/images/products/carcassonne.jpg";
+import controlXboxSeriesX from "../assets/images/products/control-xbox-series-x.jpg";
+import auricularesGamerHyperX from "../assets/images/products/Auriculares-Gamer-HyperX-Cloud-II.jpg";
+import playstation5 from "../assets/images/products/PlayStation-5.jpg";
+import pcGamerASUSROGStrix from "../assets/images/products/PC-Gamer-ASUS-ROG-Strix.jpg";
+import sillaGamerSecretlabTitan from "../assets/images/products/Silla-Gamer-Secretlab-Titan.jpg";
+import mouseGamerLogitechG502HERO from "../assets/images/products/Mouse-Gamer-Logitech-G502-HERO.jpg";
+import mousepadRazerGoliathusExtendedChroma from "../assets/images/products/Mousepad-Razer-Goliathus-Extended-Chroma.jpg";
+import poleraGamerPersonalizadaLevelUp from "../assets/images/products/Polera-Gamer-Personalizada-Level-Up.jpg";
 
 
 export const productos = [

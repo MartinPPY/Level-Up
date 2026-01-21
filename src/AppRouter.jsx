@@ -1,8 +1,9 @@
 
 import { Route, Navigate } from "react-router-dom"
 import {RoutesWithNotFound} from './routes/RoutesWithNotFound'
-import { Tienda } from "./components/tienda/Tienda"
-import { Admin } from "./components/admin/Admin"
+import { Tienda } from "./pages/tienda/Tienda"
+import { Admin } from "./pages/admin/Admin"
+
 export const AppRouter = () => {
     return (
         <RoutesWithNotFound>

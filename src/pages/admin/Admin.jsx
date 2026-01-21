@@ -1,7 +1,7 @@
 import { Navigate, Route, Routes } from "react-router-dom"
 import { Dashboard } from "./dashboard/Dashboard"
 import { Header } from "./Header"
-import { Footer } from "../footer/Footer"
+import { Footer } from "../../components/footer/Footer"
 import { Users } from "./users/Users"
 import { Products } from "./products/Products"
 import { Ventas } from "./dashboard/Ventas"

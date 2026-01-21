@@ -1,4 +1,4 @@
-import { TiendaUserForm } from "../../forms/user-form/TiendaUserForm"
+import { TiendaUserForm } from "../../../components/forms/user-form/TiendaUserForm"
 
 
 export const Registro = () => {

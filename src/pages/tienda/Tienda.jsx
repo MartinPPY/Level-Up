@@ -1,11 +1,12 @@
-import { Header } from "../header/Header"
-import { Footer } from "../footer/Footer"
 import { Navigate, Route, Routes } from "react-router-dom"
-import { Home } from "./home/Home"
-import { Registro } from "./registro/Registro"
-import { Login } from "./login/Login"
-import { Contacto } from "./contacto/Contacto"
-import { ProductDetail } from "./product-detail/ProductDetail"
+import { Home } from '../tienda/home/Home'
+import { Registro } from '../tienda/registro/Registro'
+import { Login } from '../tienda/login/Login'
+import { Contacto } from '../tienda/contacto/Contacto'
+import { ProductDetail } from '../tienda/product-detail/ProductDetail'
+import {Header} from '../../components/header/Header'
+import {Footer} from '../../components/footer/Footer'
+
 
 export const Tienda = () => {
     return (
