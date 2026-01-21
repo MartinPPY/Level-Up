@@ -5,6 +5,7 @@ import { Home } from "./home/Home"
 import { Registro } from "./registro/Registro"
 import { Login } from "./login/Login"
 import { Contacto } from "./contacto/Contacto"
+import { ProductDetail } from "./product-detail/ProductDetail"
 
 export const Tienda = () => {
     return (
@@ -12,14 +13,15 @@ export const Tienda = () => {
             <div className="d-flex flex-column min-vh-100 bg-dark   ">
                 <main className="flex-grow-1">
                     <Header />
-                <Routes>
-                    <Route index element={<Navigate to="home" />} />
-                    <Route path="/home" element={<Home />} />
-                    <Route path="/registro" element={<Registro />} />
-                    <Route path="/login" element={<Login />} />
-                    <Route path="/contacto" element={<Contacto />} />
-                </Routes>
-                <Footer />
+                    <Routes>
+                        <Route index element={<Navigate to="home" />} />
+                        <Route path="/home" element={<Home />} />
+                        <Route path="/registro" element={<Registro />} />
+                        <Route path="/login" element={<Login />} />
+                        <Route path="/contacto" element={<Contacto />} />
+                        <Route path="/producto-detalle/:codigo" element={<ProductDetail />} />
+                    </Routes>
+                    <Footer />
                 </main>
             </div>
         </>

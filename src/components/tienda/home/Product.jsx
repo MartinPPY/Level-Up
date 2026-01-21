@@ -1,6 +1,7 @@
 import { Eye, ShoppingCart } from "lucide-react"
 import { productos } from "../../../data"
 import { useCart } from "../../../context/CartContext"
+import { Link } from "react-router-dom"
 
 
 export const Product = () => {
@@ -39,12 +40,13 @@ export const Product = () => {
                                             </span>
                                         </div>
                                         <div className="d-flex gap-2 justify-content-between align-items-center">
-                                            <button
+                                            <Link
                                                 className="btn btn-sm btn-outline-info"
+                                                to={`/tienda/producto-detalle/${p.codigo}`}
                                             >
                                                 <Eye/>
                                                 Ver detalle
-                                            </button>
+                                            </Link>
                                             <button className="btn btn-sm btn-outline-light d-flex align-items-center gap-2" onClick={() => addToCart(p.codigo)}>
                                                 <ShoppingCart />
                                                 Añadir al carrito
